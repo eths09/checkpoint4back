@@ -10,4 +10,4 @@ app.use(express.json());
 app.use(express.urlencoded({extended: true}))
 
 setupRoutes(app)
-app.listen(port, () => console.log('server ok for port' +port ));
+app.listen(port, () => console.log('server ok for port' + port ));
