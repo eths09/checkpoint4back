@@ -9,4 +9,14 @@ const getAll = () => {
         })
 }
 
-export default { getAll }; 
+const getOneById = (id) => {
+    return new promise((resolve, reject) => {
+        dbConnect.query('SELECT * FROM machine WHERE id = ?', (err,results) => {
+           if (err) reject("no machine for this id");
+           else resolve(results);
+        })
+        })
+}
+
+
+export default { getAll, getOneById }; 
